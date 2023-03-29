@@ -7,6 +7,9 @@ import AppButton from '../components/AppButton';
 import AppInputText from '../components/AppInputText';
 import Screen from '../components/Screen';
 import AppText from '../components/AppText';
+import ErrorMessage from '../components/ErrorMessage';
+import FormInputField from '../components/FormInputField';
+import SubmitButton from '../components/SubmitButton';
 
 
 const validationSChema = Yup.object().shape({
@@ -21,29 +24,31 @@ function LoginScreen(props) {
             <Image source={require('../assets/logo.png')} style={styles.Logo} />
             <Formik
                 initialValues={{ email: '', password: '' }}
-                onSubmit={values => console.log(values)}
                 validationSchema={validationSChema}
+                onSubmit={(values)=>console.log(values)}
             >
 
-                {({ handleChange, handleSubmit, errors }) => (
+                {() => (
                     <>
-                        <AppInputText icon='email' placeholder='Email'
+                        <FormInputField icon='email' placeholder='Email'
                             autoCapitalize='none'
                             autoCorrect={false}
                             keyboardType='email-address'
                             textContentType='emailAddress'
-                            onChangeText={handleChange("email")}
+                            name="email"
+                        
                         />
-                        <AppText style={{ color: 'red' }}>{errors.email}</AppText>
-                        <AppInputText icon='lock' placeholder='Password'
+
+                        <FormInputField icon='lock' placeholder='Password'
                             autoCapitalize='none'
+                            name="password"
                             autoCorrect={false}
                             textContentType='password'
+                            
                             secureTextEntry
-                            onChangeText={handleChange("password")}
+                          
                         />
-                        <AppText style={{ color: 'red' }}>{errors.password}</AppText>
-                        <AppButton title='Login' onPress={handleSubmit} />
+                        <SubmitButton title='Login' />
                     </>
                 )}
 
