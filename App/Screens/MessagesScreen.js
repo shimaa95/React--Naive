@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
 
-import ItemSperator from '../components/ItemSperator';
-import ListItems from '../components/ListItems';
-import ListItemsDeleteAction from '../components/ListItemsDeleteAction';
+import ItemSperator from '../components/Lists/ItemSperator';
+import ListItems from '../components/Lists/ListItems';
+import ListItemsDeleteAction from '../components/Lists/ListItemsDeleteAction';
 import Screen from '../components/Screen';
 
 
