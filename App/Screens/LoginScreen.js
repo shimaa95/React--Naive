@@ -39,7 +39,6 @@ function LoginScreen(props) {
                             name="password"
                             autoCorrect={false}
                             textContentType='password'
-                            
                             secureTextEntry
                           
                         />

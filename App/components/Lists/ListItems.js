@@ -16,7 +16,7 @@ function ListItems({ title, subTitle, image, onPress, IconComponent, renderRight
                         <AppText style={styles.title} numberOfLines={1} >{title}</AppText>
                         {subTitle && <AppText style={styles.subtitle} numberOfLines={2}>{subTitle}</AppText>}
                     </View>
-                    <MaterialCommunityIcons color ={colors.medium}name='chevron-right' size={25} />
+                    <MaterialCommunityIcons color ={colors.Ligth} name='chevron-right' size={25} />
                 </View>
             </TouchableHighlight>
         </Swipeable>
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         fontWeight: "500",
     },
     subtitle: {
-        color: colors.medium,
+        color: colors.Ligth,
     }
 })
 
