@@ -14,8 +14,8 @@ function AppPicker({ icon, items, placeholder, onSelectItem, selectedItem }) {
             <TouchableWithoutFeedback onPress={() => setModelVisible(true)}>
                 <View style={styles.container}>
                     {icon && <MaterialCommunityIcons name={icon} size={20} color={colors.medium} style={styles.icon} />}
-                 
-                        {selectedItem ?   selectedItem.lable :placeholder }
+              
+                        {selectedItem ?     <AppText style={styles.AppText}> {selectedItem.lable }</AppText> : <AppText style={styles.place}>{placeholder}</AppText> }
                     <MaterialCommunityIcons name="chevron-down" size={20} color={colors.medium} style={styles.iconApps} />
                 </View>
             </TouchableWithoutFeedback>
@@ -58,6 +58,8 @@ const styles = StyleSheet.create({
 
     text: {
         flex: 1,
+        color:colors.dark
+    
 
     }
 
